@@ -3,7 +3,7 @@ from my_function import incrementing_function
 
 # define the unit tests
 class my_unit_tests(unittest.TestCase):
-    def incrementing_function(self):
+    def test_incrementing_function(self):
         
         # test adding integers
         self.assertEqual(incrementing_function(5), 6)
