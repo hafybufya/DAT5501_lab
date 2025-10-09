@@ -16,35 +16,27 @@ prompts_days_in_month= "How many days are in the month? "
 prompt_first_day = "What day of the week does the month start on? (Sun=1, Mon=2, ..., Sat= 7) "
 prompt_error_handling = "Enter a value between "
 
-def find_days_in_month():
-    while True:
-        try:
-            days_in_month = int(input( prompts_days_in_month))
-            if min_number_month_days <= days_in_month <= max_number_month_days:
 
-                break
-            else:
-                print(f"{prompt_error_handling} {min_number_month_days} to {max_number_month_days}")
-        except ValueError:
-            print(f"{prompt_error_handling} {min_number_month_days} to {max_number_month_days}") #unhardcode numbers
-
-        return days_in_month
-    
-
-def find_first_day_month():    
-    """Ask user the day of the week month starts on"""
-    while True:
-        try:
-            first_day  = int(input(prompt_first_day))
-            if min_number_week_days <= first_day  <= max_number_week_days :
-                
-                break
-            else:
-                print(f"{prompt_error_handling} {min_number_week_days} to {max_number_week_days}")
-        except ValueError:
+while True:
+    try:
+        days_in_month = int(input( prompts_days_in_month))
+        if min_number_month_days <= days_in_month <= max_number_month_days:
+            break
+        else:
+            print(f"{prompt_error_handling} {min_number_month_days} to {max_number_month_days}")
+    except ValueError:
+        print(f"{prompt_error_handling} {min_number_month_days} to {max_number_month_days}") #unhardcode numbers
+        
+while True:
+    try:
+        first_day  = int(input(prompt_first_day))
+        if min_number_week_days <= first_day  <= max_number_week_days :
+            break
+        else:
             print(f"{prompt_error_handling} {min_number_week_days} to {max_number_week_days}")
-            
-        return first_day
+    except ValueError:
+        print(f"{prompt_error_handling} {min_number_week_days} to {max_number_week_days}")
+        
 
  # function to print calendar
 def calender_printer(days_in_month, first_day):
@@ -65,9 +57,5 @@ def calender_printer(days_in_month, first_day):
             print()  # newline
 
     return calender_title
-
-#calls functions
-
-days_in_month = find_days_in_month()
-first_day = find_first_day_month()
+#calls function
 calender_printer(days_in_month, first_day)
