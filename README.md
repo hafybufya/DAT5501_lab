@@ -1,6 +1,9 @@
 # Introduction to DAT5501 Module and Version Control
 
+This repository was created during Week 1 of the DAT5501 to practisce and learn basic GitHub skills and coding etiquettes.
+
 # 📁 Project Structure
+.
 ├── index.html
 ├── initialPython.py
 ├── myNewFile.txt
@@ -9,9 +12,7 @@
     ├── myFunction.py
     └── unitTestFunction.py
     
-# Contains 
+# Installation
+Python 3.10 or newer to run python files 
 
-This project is simply to practise basic GitHub skills including merging, branching as well as writing unit tests.
-
-This code does not require any installed python libraries.
 
